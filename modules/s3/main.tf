@@ -7,7 +7,7 @@ data "aws_iam_policy_document" "this" {
     ]
 
     resources = [
-      "${var.s3}/*"
+      "${var.bucket_arn}/*"
     ]
   }
 
@@ -18,7 +18,7 @@ data "aws_iam_policy_document" "this" {
     ]
 
     resources = [
-      var.s3
+      var.bucket_arn
     ]
   }
 }

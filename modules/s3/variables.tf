@@ -1,4 +1,4 @@
-variable "s3" {
+variable "bucket_arn" {
   type        = string
   description = "S3 Bucket ARN"
 }
