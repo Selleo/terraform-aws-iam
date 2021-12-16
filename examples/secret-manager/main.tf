@@ -41,8 +41,8 @@ output "IAM_user2_secret" {
 }
 
 module "aws_iam_secret_manager_policy" {
-  source            = "../../modules/secret-manager"
-  secrets           = [aws_secretsmanager_secret.secret_no_1.arn]
-  read_access_users = [aws_iam_user.read_only_user.name]
-  full_access_users = [aws_iam_user.full_access_user.name]
+  source      = "../../modules/secret-manager"
+  secrets     = [aws_secretsmanager_secret.secret_no_1.arn]
+  read_users  = [aws_iam_user.read_only_user.name]
+  write_users = [aws_iam_user.full_access_user.name]
 }
