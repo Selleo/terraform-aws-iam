@@ -1,3 +1,8 @@
+variable "name_prefix" {
+  type        = string
+  description = "Prefix that will be prepended to resources names"
+}
+
 variable "secrets" {
   type        = set(string)
   description = "Set of Secret Manager Secrets ARNs"
