@@ -11,6 +11,7 @@ data "aws_iam_policy_document" "read_secret" {
     actions = [
       "secretsmanager:DescribeSecret",
       "secretsmanager:GetSecretValue",
+      "secretsmanager:ListSecretVersionIds",
     ]
 
     resources = var.secrets
@@ -20,7 +21,6 @@ data "aws_iam_policy_document" "read_secret" {
 data "aws_iam_policy_document" "write_secret" {
   statement {
     actions = [
-      "secretsmanager:ListSecretVersionIds",
       "secretsmanager:PutSecretValue",
     ]
 
