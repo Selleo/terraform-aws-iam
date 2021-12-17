@@ -78,7 +78,8 @@ output "IAM_user_secret" {
 }
 
 module "cloudfront_invalidation_access2" {
-  source     = "../../modules/cloudfront"
-  cloudfront = aws_cloudfront_distribution.example_cloudfront.arn
-  users      = [aws_iam_user.cloudfront_user.name]
+  source      = "../../modules/cloudfront"
+  name_prefix = "aws-iam"
+  cloudfront  = aws_cloudfront_distribution.example_cloudfront.arn
+  users       = [aws_iam_user.cloudfront_user.name]
 }
