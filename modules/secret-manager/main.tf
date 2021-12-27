@@ -45,6 +45,7 @@ resource "aws_iam_policy" "write_secret" {
 }
 
 resource "aws_iam_policy_attachment" "write_secret" {
+  count      = length(var.write_users) > 0 ? 1 : 0
   name       = "${var.name_prefix}-write-secret"
   users      = var.write_users
   policy_arn = aws_iam_policy.write_secret.arn
