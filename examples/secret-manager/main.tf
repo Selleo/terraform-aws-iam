@@ -14,11 +14,11 @@ resource "aws_iam_access_key" "read_only_user" {
   user = aws_iam_user.read_only_user.name
 }
 
-output "IAM_user1_id" {
+output "iam_user1_id" {
   value = aws_iam_access_key.read_only_user.id
 }
 
-output "IAM_user1_secret" {
+output "iam_user1_secret" {
   value     = aws_iam_access_key.read_only_user.secret
   sensitive = true
 }
@@ -31,11 +31,11 @@ resource "aws_iam_access_key" "full_access_user" {
   user = aws_iam_user.full_access_user.name
 }
 
-output "IAM_user2_id" {
+output "iam_user2_id" {
   value = aws_iam_access_key.full_access_user.id
 }
 
-output "IAM_user2_secret" {
+output "iam_user2_secret" {
   value     = aws_iam_access_key.full_access_user.secret
   sensitive = true
 }
