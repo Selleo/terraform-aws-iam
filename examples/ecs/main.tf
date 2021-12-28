@@ -80,7 +80,7 @@ resource "aws_alb_listener" "http" {
   }
 }
 
-output "ECS_cluster_id" {
+output "ecs_cluster_id" {
   value = module.ecs_cluster.ecs_cluster_id
 }
 
@@ -92,11 +92,11 @@ resource "aws_iam_access_key" "ecs" {
   user = aws_iam_user.ecs.name
 }
 
-output "IAM_user_id" {
+output "iam_user_id" {
   value = aws_iam_access_key.ecs.id
 }
 
-output "IAM_user_secret" {
+output "iam_user_secret" {
   value     = aws_iam_access_key.ecs.secret
   sensitive = true
 }
