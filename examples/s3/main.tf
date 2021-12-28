@@ -11,11 +11,11 @@ resource "aws_iam_access_key" "s3_user" {
   user = aws_iam_user.s3_user.name
 }
 
-output "IAM_user_id" {
+output "iam_user_id" {
   value = aws_iam_access_key.s3_user.id
 }
 
-output "IAM_user_secret" {
+output "iam_user_secret" {
   value     = aws_iam_access_key.s3_user.secret
   sensitive = true
 }
