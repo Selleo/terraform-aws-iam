@@ -49,7 +49,7 @@ output "iam_push_user_secret" {
 }
 
 module "aws_iam_ecr_policy" {
-  source      = "../../modules/ecr"
+  source      = "../../modules/ecr-pull-push"
   name_prefix = "aws-iam"
   ecr_arn     = aws_ecr_repository.this.arn
   pull_users  = [aws_iam_user.pull.name]
