@@ -1,6 +1,6 @@
 variable "name_prefix" {
   type        = string
-  description = "Prefix that will be prepended to resources names"
+  description = "Prefix that will be prepended to resource names"
 }
 
 variable "ecr_arn" {
@@ -8,7 +8,14 @@ variable "ecr_arn" {
   description = "Elastic Container Registry Repository (ECR) ARN"
 }
 
-variable "users" {
+variable "pull_users" {
   type        = set(string)
-  description = "Set of users names"
+  description = "Set of user names"
+  default     = []
+}
+
+variable "push_users" {
+  type        = set(string)
+  description = "Set of user names"
+  default     = []
 }
