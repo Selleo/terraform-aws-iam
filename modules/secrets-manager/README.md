@@ -1,12 +1,30 @@
+## Usage
+
+```tf
+module "aws_iam_secret_manager_policy" {
+  source      = "Selleo/iam/aws//modules/secret-manager"
+  name_prefix = "aws-iam-secret-manager"
+  secrets = [
+    aws_secretsmanager_secret.secret_no_1.arn,
+    aws_secretsmanager_secret.secret_no_2.arn,
+  ]
+  read_users  = [aws_iam_user.read_only_user.name]
+  write_users = [aws_iam_user.full_access_user.name]
+}
+```
+
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 3.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 3.0 |
 
 ## Modules
 
@@ -27,7 +45,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name_prefix"></a> [name\_prefix](#input\_name\_prefix) | Prefix that will be prepended to resources names | `string` | n/a | yes |
+| <a name="input_name_prefix"></a> [name\_prefix](#input\_name\_prefix) | Prefix that will be prepended to resource names | `string` | n/a | yes |
 | <a name="input_read_users"></a> [read\_users](#input\_read\_users) | Set of users names | `set(string)` | `[]` | no |
 | <a name="input_secrets"></a> [secrets](#input\_secrets) | Set of Secret Manager Secrets ARNs | `set(string)` | n/a | yes |
 | <a name="input_write_users"></a> [write\_users](#input\_write\_users) | Set of users names | `set(string)` | `[]` | no |

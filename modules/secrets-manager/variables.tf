@@ -1,6 +1,6 @@
 variable "name_prefix" {
   type        = string
-  description = "Prefix that will be prepended to resources names"
+  description = "Prefix that will be prepended to resource names"
 }
 
 variable "secrets" {

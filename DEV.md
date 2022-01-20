@@ -15,7 +15,7 @@ Generate documentation:
 ```
 mkdir -p tmp/
 
-
+terraform-docs markdown ./modules/s3-read-write > tmp/s3-read-write.md
 ```
 
 then copy the output to appropriate README(s).
