@@ -4,7 +4,11 @@ Collection of Terraform iam policies modules for app deployment on AWS. See [Cha
 
 ## List of submodules
 
-* [LINK](https://tfregistrylink.com)
+* [Cloudfront - Invalidation](https://registry.terraform.io/modules/Selleo/iam/aws/latest/submodules/cloudfront-invalidation)
+* [ECR - Pull/Push](https://registry.terraform.io/modules/Selleo/iam/aws/latest/submodules/ecr-pull-push)
+* [ECS - Deploy](https://registry.terraform.io/modules/Selleo/iam/aws/latest/submodules/ecs-deploy)
+* [S3 - Read/Write](https://registry.terraform.io/modules/Selleo/iam/aws/latest/submodules/s3-read-write)
+* [Secrets Manager](https://registry.terraform.io/modules/Selleo/iam/aws/latest/submodules/secrets-manager)
 
 ## Maintainers
 
