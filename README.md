@@ -9,12 +9,14 @@ Collection of Terraform iam policies modules for app deployment on AWS. See [Cha
 * [ECS - Deploy](https://registry.terraform.io/modules/Selleo/iam/aws/latest/submodules/ecs-deploy)
 * [S3 - Read/Write](https://registry.terraform.io/modules/Selleo/iam/aws/latest/submodules/s3-read-write)
 * [Secrets Manager](https://registry.terraform.io/modules/Selleo/iam/aws/latest/submodules/secrets-manager)
+* [SSM Manager](https://registry.terraform.io/modules/Selleo/iam/aws/latest/submodules/ssm)
 
 ## Maintainers
 
 See [Dev document](https://github.com/Selleo/terraform-aws-backend/blob/main/DEV.md) for development instructions.
 
 * Mateusz Wieczorek ([@mateuszwu](https://github.com/mateuszwu))
+* Bartłomiej Wójtowicz ([@qbart](https://github.com/qbart))
 
 ## LICENSE
 
