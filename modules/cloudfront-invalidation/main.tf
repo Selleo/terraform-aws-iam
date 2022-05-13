@@ -5,7 +5,7 @@ data "aws_iam_policy_document" "this" {
     ]
 
     resources = [
-      var.cloudfront
+      var.cloudfront_arns
     ]
   }
 }

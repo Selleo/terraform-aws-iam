@@ -3,9 +3,9 @@ variable "name_prefix" {
   description = "Prefix that will be prepended to resource names"
 }
 
-variable "cloudfront" {
-  type        = string
-  description = "Cloudfront ARN"
+variable "cloudfront_arns" {
+  type        = list(string)
+  description = "Cloudfront ARNs"
 }
 
 variable "users" {
