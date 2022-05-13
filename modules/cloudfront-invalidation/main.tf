@@ -4,9 +4,7 @@ data "aws_iam_policy_document" "this" {
       "cloudfront:CreateInvalidation",
     ]
 
-    resources = [
-      var.cloudfront_arns
-    ]
+    resources = var.cloudfront_arns
   }
 }
 
