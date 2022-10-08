@@ -13,9 +13,7 @@ go get github.com/terraform-docs/terraform-docs
 
 Generate documentation:
 ```
-mkdir -p tmp/
-
-terraform-docs markdown ./modules/s3-read-write > tmp/s3-read-write.md
+./generate-docs.sh
 ```
 
 then copy the output to appropriate README(s).
