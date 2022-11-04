@@ -1,9 +1,14 @@
 data "aws_iam_policy_document" "this" {
   statement {
     actions = [
-      "s3:GetObject",
-      "s3:DeleteObject",
+      "s3:DeleteObjectTagging",
       "s3:PutObject",
+      "s3:GetObjectAcl",
+      "s3:GetObject",
+      "s3:GetObjectTagging",
+      "s3:PutObjectTagging",
+      "s3:DeleteObject",
+      "s3:PutObjectAcl"
     ]
 
     resources = [
@@ -13,8 +18,9 @@ data "aws_iam_policy_document" "this" {
 
   statement {
     actions = [
+      "s3:GetBucketTagging",
       "s3:ListBucket",
-      "s3:GetBucketLocation",
+      "s3:GetBucketLocation"
     ]
 
     resources = [
