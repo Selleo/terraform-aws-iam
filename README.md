@@ -1,4 +1,4 @@
-# Terraform AWS backend module
+# Terraform AWS IAM module
 
 Collection of Terraform iam policies modules for app deployment on AWS. See [Changelog](https://github.com/Selleo/terraform-aws-iam/blob/main/CHANGELOG.md) for release information.
 
