@@ -18,11 +18,13 @@ No modules.
 |------|------|
 | [aws_iam_access_key.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_access_key) | resource |
 | [aws_iam_user.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user) | resource |
+| [aws_iam_user_group_membership.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_group_membership) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_groups"></a> [groups](#input\_groups) | List of groups to attach | `list(string)` | `[]` | no |
 | <a name="input_name"></a> [name](#input\_name) | User name | `string` | n/a | yes |
 
 ## Outputs

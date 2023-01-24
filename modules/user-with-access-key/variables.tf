@@ -3,3 +3,8 @@ variable "name" {
   description = "User name"
 }
 
+variable "groups" {
+  type        = list(string)
+  description = "List of groups to attach"
+  default     = []
+}
