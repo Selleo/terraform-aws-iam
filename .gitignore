@@ -29,3 +29,6 @@ override.tf.json
 /tmp/
 
 .tool-versions
+
+# Mac files
+.DS_Store
