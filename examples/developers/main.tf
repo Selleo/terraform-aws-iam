@@ -1,5 +1,5 @@
 module "secrets" {
-  source = "../../modules/iam-user-for-devs"
+  source = "../../modules/developers"
 
   users = ["test@test.com"]
 }
