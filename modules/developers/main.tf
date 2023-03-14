@@ -59,10 +59,10 @@ resource "aws_iam_group_membership" "this" {
 
 resource "aws_iam_group_policy_attachment" "this" {
   group      = aws_iam_group.this.name
-  policy_arn = aws_iam_policy.this_group.arn
+  policy_arn = aws_iam_policy.this.arn
 }
 
-resource "aws_iam_policy" "this_group" {
+resource "aws_iam_policy" "this" {
   name   = random_id.this.hex
   policy = data.aws_iam_policy_document.this.json
 }
