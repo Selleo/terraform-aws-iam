@@ -4,6 +4,10 @@ resource "aws_iam_user" "this" {
 
 resource "aws_iam_access_key" "this" {
   user = aws_iam_user.this.name
+
+  depends_on = [
+    aws_iam_user.this,
+  ]
 }
 
 resource "aws_iam_user_group_membership" "this" {
@@ -11,4 +15,8 @@ resource "aws_iam_user_group_membership" "this" {
 
   user   = var.name
   groups = var.groups
+
+  depends_on = [
+    aws_iam_user.this,
+  ]
 }
