@@ -62,6 +62,7 @@ No modules.
 | [aws_iam_access_key.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_access_key) | resource |
 | [aws_iam_user.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user) | resource |
 | [aws_iam_user_group_membership.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_group_membership) | resource |
+| [aws_iam_user_policy_attachment.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_policy_attachment) | resource |
 
 ## Inputs
 
@@ -69,6 +70,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_groups"></a> [groups](#input\_groups) | List of groups to attach | `list(string)` | `[]` | no |
 | <a name="input_name"></a> [name](#input\_name) | User name | `string` | n/a | yes |
+| <a name="input_policies"></a> [policies](#input\_policies) | List of policies to attach | `list(string)` | `[]` | no |
 
 ## Outputs
 
